@@ -1,4 +1,4 @@
-#ifndefined BLOCKSTONE_H
+#ifndef BLOCKSTONE_H
 #define BLOCKSTONE_H
 
 #include "IBlock.h"

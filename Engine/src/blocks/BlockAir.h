@@ -1,4 +1,4 @@
-#ifndefined BLOCKAIR_H
+#ifndef BLOCKAIR_H
 #define BLOCKAIR_H
 
 #include "IBlock.h"
