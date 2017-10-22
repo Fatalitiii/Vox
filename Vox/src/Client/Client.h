@@ -1,4 +1,4 @@
-#ifndefined CLIENT_H
+#ifndef CLIENT_H
 #define CLIENT_H
 
 #include <GL/glew.h>

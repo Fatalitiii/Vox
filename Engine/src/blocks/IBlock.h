@@ -1,4 +1,4 @@
-#ifndefined IBLOCK_H
+#ifndef IBLOCK_H
 #define IBLOCK_H
 
 #include <iostream>
