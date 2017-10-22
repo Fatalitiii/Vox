@@ -1,10 +1,12 @@
+#pragma once
 #include "../blocks/BlockAir.h"
 #include "../blocks/BlockStone.h"
 #include "GameRegistry.h"
 
-class Blocks {
+class Blocks{
 public:
-	static Block AIR;
-	static Block STONE;
+	static IBlock AIR;
+	static IBlock STONE;
+
 	static void registerBlocks();
 };

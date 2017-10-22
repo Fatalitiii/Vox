@@ -23,8 +23,8 @@ void Client::init() {
 
 	std::cout << "Client" << std::endl;
 	//update
-	std::cout << Blocks::AIR.getName() << std::endl;
-	std::cout << Blocks::STONE.getName() << std::endl;
+	//std::cout << Blocks::AIR->getName() << std::endl;
+	//std::cout << Blocks::STONE->getName() << std::endl;
 	update();
 }
 
