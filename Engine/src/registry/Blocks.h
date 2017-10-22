@@ -15,6 +15,7 @@ public:
 	static IBlock WATER;
 	static IBlock WOOD;
 	static IBlock LEAVES;
+	static IBlock PLANK;
 
 	static void registerBlocks();
 };
