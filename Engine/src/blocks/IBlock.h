@@ -1,4 +1,6 @@
-#pragma once
+#ifndefined IBLOCK_H
+#define IBLOCK_H
+
 #include <iostream>
 #include <string>
 
@@ -16,3 +18,5 @@ public:
 protected:
 	std::string unlocalizedName;
 };
+
+#endif // IBLOCK_H

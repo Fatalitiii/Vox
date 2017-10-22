@@ -1,3 +1,6 @@
+#ifndefined BLOCKSTONE_H
+#define BLOCKSTONE_H
+
 #include "IBlock.h"
 
 class BlockStone : public IBlock {
@@ -6,3 +9,5 @@ public:
 
 	}
 };
+
+#endif // BLOCKSTONE_H
