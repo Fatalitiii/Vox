@@ -3,6 +3,7 @@
 #include <iostream>
 
 Client::Client() {
+	std::cout << "\n---------- Stating Client ----------" << std::endl;
 	if (!glfwInit()) {
 		std::cout << "GLFW Init failed!" << std::endl;
 		close();
@@ -21,10 +22,6 @@ void Client::init() {
 	if (glewInit() != GLEW_OK)
 		std::cout << "Glew Init failed!" << std::endl;
 
-	std::cout << "Client" << std::endl;
-	//update
-	//std::cout << Blocks::AIR->getName() << std::endl;
-	//std::cout << Blocks::STONE->getName() << std::endl;
 	update();
 }
 
