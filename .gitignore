@@ -19,5 +19,6 @@ Dependencies/
 *.log
 *.tlog
 *.user
+*.opendb
 
-Vox.VC.db
+Vox.VC.VC.opendb
