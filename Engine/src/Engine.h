@@ -7,7 +7,6 @@
 namespace engine {
 	//GameRegistry gameRegistry;
 	void init();
-	void r();
 		//std::cout << "Init blocks" << std::endl;
 		
 
