@@ -1,3 +1,6 @@
+#ifndefined CLIENT_H
+#define CLIENT_H
+
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 #include "Server.h"
@@ -12,3 +15,5 @@ private:
 	int close();
 	GLFWwindow* window;
 };
+
+#endif // CLIENT_H

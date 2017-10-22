@@ -1,4 +1,6 @@
-#pragma once
+#ifndef GAMEREGISTRY_H
+#define GAMEREGISTRY_H
+
 #include "../blocks/IBlock.h"
 #include <map>
 #include <string>
@@ -19,3 +21,5 @@ private:
 	static std::map<std::string, IBlock> blockName;
 	//Item typedef std::map<Item, int> blockID;
 };
+
+#endif // GAMEREGISTRY_H
