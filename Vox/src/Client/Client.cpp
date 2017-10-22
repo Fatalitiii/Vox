@@ -11,7 +11,8 @@ Client::Client() {
 	init();
 }
 
-void Client::init() {
+void Client::init() 
+{
 	//Create window
 	window = glfwCreateWindow(1080, 720, "Hello World", NULL, NULL);
 	if (!window)
@@ -25,7 +26,8 @@ void Client::init() {
 	update();
 }
 
-void Client::update() {
+void Client::update() 
+{
 	while (!glfwWindowShouldClose(window))
 	{
 		render();
@@ -33,7 +35,8 @@ void Client::update() {
 	//Render
 }
 
-void Client::render() {
+void Client::render() 
+{
 	glClear(GL_COLOR_BUFFER_BIT);
 
 	glBegin(GL_TRIANGLES);
@@ -47,7 +50,8 @@ void Client::render() {
 	glfwPollEvents();
 }
 
-int Client::close() {
+int Client::close() 
+{
 	if (!window)
 		glfwTerminate();
 	return -1;

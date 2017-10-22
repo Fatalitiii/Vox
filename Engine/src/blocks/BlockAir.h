@@ -1,3 +1,6 @@
+#ifndef BLOCKAIR_H
+#define BLOCKAIR_H
+
 #include "IBlock.h"
 
 class BlockAir : public IBlock {
@@ -14,3 +17,5 @@ public:
 		return false;
 	}
 };
+
+#endif // BLOCKAIR_H

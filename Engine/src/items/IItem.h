@@ -1,4 +1,6 @@
-#pragma once
+#ifndef IITEM_H
+#define IITEM_H
+
 #include <iostream>
 #include <string>
 
@@ -11,3 +13,5 @@ public:
 protected:
 	std::string unlocalizedName;
 };
+
+#endif // IITEM_H

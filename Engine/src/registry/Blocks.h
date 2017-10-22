@@ -1,4 +1,6 @@
-#pragma once
+#ifndef BLOCKS_H
+#define BLOCKS_H
+
 #include "../blocks/BlockAir.h"
 #include "../blocks/BlockStone.h"
 #include "GameRegistry.h"
@@ -10,3 +12,5 @@ public:
 
 	static void registerBlocks();
 };
+
+#endif //BLOCKS_H
