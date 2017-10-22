@@ -7,6 +7,7 @@
 *.sln
 Dependencies/
 .vs
+.db
 
 .git
 
@@ -17,3 +18,4 @@ Dependencies/
 *.log
 *.tlog
 *.user
+*.opendb
