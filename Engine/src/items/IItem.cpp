@@ -1,19 +1,19 @@
-#include "Block.h"
+#include "IItem.h"
 
-Block::Block(string unlocalName) {
+IItem::IItem(std::string unlocalName) {
 	std::cout << "Setting name: " << unlocalName << std::endl;
 	this->unlocalizedName = unlocalName;
 }
 
-bool Block::isVisible() {
+bool IItem::isVisible() {
 	return true;
 }
 
-bool Block::isCollidable() {
+bool IItem::isCollidable() {
 	return true;
 }
 
-string Block::getName() const {
+std::string IItem::getName() const {
 	std::cout << "Getting name: " << this->unlocalizedName << std::endl;
 	return this->unlocalizedName;
 }

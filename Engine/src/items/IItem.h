@@ -1,14 +1,13 @@
 #pragma once
 #include <iostream>
 #include <string>
-using namespace std;
 
-const class Block {
+const class IItem {
 public:
-	Block(string unlocalName);
+	IItem(std::string unlocalName);
 	virtual bool isVisible();
 	virtual bool isCollidable();
-	string getName() const;
+	std::string getName() const;
 protected:
-	string unlocalizedName;
+	std::string unlocalizedName;
 };

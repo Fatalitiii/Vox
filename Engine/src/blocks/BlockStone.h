@@ -1,8 +1,8 @@
-#include "Block.h"
+#include "IBlock.h"
 
-class BlockStone : public Block {
+class BlockStone : public IBlock {
 public:
-	BlockStone(string unlocalName) : Block(unlocalName) {
+	BlockStone(std::string modID, std::string unlocalName) : IBlock(modID, unlocalName) {
 
 	}
 };
