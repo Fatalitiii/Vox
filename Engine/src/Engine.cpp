@@ -1,7 +1,8 @@
 #include "Engine.h"
 
 namespace engine {
-	void init() {
+	void init() 
+	{
 		Blocks::registerBlocks();
 	}
 }

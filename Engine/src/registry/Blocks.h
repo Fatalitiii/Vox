@@ -5,10 +5,16 @@
 #include "../blocks/BlockStone.h"
 #include "GameRegistry.h"
 
-class Blocks{
+class Blocks {
 public:
 	static IBlock AIR;
 	static IBlock STONE;
+	static IBlock DIRT;
+	static IBlock GRASS;
+	static IBlock SAND;
+	static IBlock WATER;
+	static IBlock WOOD;
+	static IBlock LEAVES;
 
 	static void registerBlocks();
 };
