@@ -5,7 +5,8 @@
 
 bool game = true;
 
-int main() {
+int main() 
+{
 	engine::init();
 	void loadConfig();
 	if (game) {
@@ -16,7 +17,8 @@ int main() {
 	}
 }
 
-void loadConfit() {
+void loadConfit() 
+{
 	//load config file
 }
 
