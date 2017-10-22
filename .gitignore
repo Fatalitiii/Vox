@@ -6,9 +6,10 @@
 *.filters
 *.sln
 Dependencies/
-.vs
-.db
-
+*.vs
+*.db
+*.vc.db
+*.opendb
 .git
 
 /bin
@@ -18,4 +19,5 @@ Dependencies/
 *.log
 *.tlog
 *.user
-*.opendb
+
+Vox.VC.db
