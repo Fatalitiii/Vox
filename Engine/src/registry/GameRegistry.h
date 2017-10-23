@@ -11,6 +11,7 @@ public:
 	IBlock static *getBlock(int id);
 	IBlock static *getBlock(std::string block);
 	int static getBlockID(std::string block);
+	int static getBlockRegistrySize();
 	//Item registerItem(Item block, char name);
 private:
 	const int MIN_BLOCK_ID = 0;

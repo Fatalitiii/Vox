@@ -3,7 +3,8 @@
 std::map<int, IBlock> GameRegistry::blockID;
 std::map<std::string, IBlock> GameRegistry::blockName;
 
-void GameRegistry::registerBlock(IBlock block) {
+void GameRegistry::registerBlock(IBlock block)
+{
 	if (GameRegistry::blockName.count(block.getName())) {
 		//Block with same name already in regisrty
 		std::cout << "Unable to add " << block.getName() << " as already in registry under ID["
@@ -13,23 +14,38 @@ void GameRegistry::registerBlock(IBlock block) {
 		//Block is the first instancy
 		GameRegistry::blockID.insert(std::make_pair(GameRegistry::blockID.size(), block));
 		GameRegistry::blockName.insert(make_pair(block.getName(), block));
+
 		std::cout << "Registered " << block.getName() << " with ID["
 			<< getBlockID(block.getName()) << "]" << std::endl;
+		/* TODO
+			Check to see why ID is being assigned to various other blocks as well.
+
+		*/
 	}
 }
 
-IBlock* GameRegistry::getBlock(int id) {
+IBlock* GameRegistry::getBlock(int id)
+{
 	if (GameRegistry::blockID.size() < id || GameRegistry::blockID.size() == 0)
 		return NULL;
 	return &GameRegistry::blockID.find(id)->second;
 }
 
-IBlock* GameRegistry::getBlock(std::string blockName) {
+IBlock* GameRegistry::getBlock(std::string blockName)
+{
 	int id = distance(GameRegistry::blockName.begin(), GameRegistry::blockName.find(blockName));
 	return getBlock(id);
 }
 
-int GameRegistry::getBlockID(std::string blockName) {
+int GameRegistry::getBlockID(std::string blockName)
+{
 	int id = distance(GameRegistry::blockName.begin(), GameRegistry::blockName.find(blockName));
 	return id;
 }
+
+int GameRegistry::getBlockRegistrySize()
+{
+	int size = GameRegistry::blockID.size();
+	return size;
+}
+

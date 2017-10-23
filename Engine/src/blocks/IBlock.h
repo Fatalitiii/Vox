@@ -9,14 +9,12 @@ public:
 	IBlock(std::string modID, std::string unlocalName);
 	virtual bool isVisible();
 	virtual bool isCollidable();
+	virtual int getStateFromMeta(int meta);
+	virtual void setDefaultState(int meta); // TODO: change int meta to IBlockState when complete
 	std::string getName() const;
-	bool operator< (const IBlock& obj) const
-	{
-		if (obj.unlocalizedName < this->unlocalizedName)
-			return true;
-	}
 protected:
 	std::string unlocalizedName;
+	int meta;
 };
 
 #endif // IBLOCK_H

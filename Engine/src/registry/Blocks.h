@@ -3,6 +3,7 @@
 
 #include "../blocks/BlockAir.h"
 #include "../blocks/BlockStone.h"
+#include "../blocks/BlockPlank.h"
 #include "GameRegistry.h"
 
 class Blocks {
