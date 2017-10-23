@@ -18,6 +18,9 @@ public:
 	static IBlock LEAVES;
 	static IBlock PLANK;
 
+	/**
+        Register all the blocks with the registry.
+    */
 	static void registerBlocks();
 };
 

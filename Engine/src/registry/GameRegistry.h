@@ -7,10 +7,37 @@
 
 class GameRegistry {
 public:
+	/**
+		Registers block with the registry
+		@param block
+	*/
 	void static registerBlock(IBlock block);
+
+	/**
+		Gets the IBlock
+		@param id ID of the block.
+		@return The IBlock.
+	*/
 	IBlock static *getBlock(int id);
+
+	/**
+		Gets the IBlock
+		@param block Blocks name.
+		@return The IBlock.
+	*/
 	IBlock static *getBlock(std::string block);
+
+	/**
+		Gets the IBlock ID
+		@param block Blocks name.
+		@return The the desired blocks id.
+	*/
 	int static getBlockID(std::string block);
+
+	/**
+		Size of the block registry.
+		@return The size of the block registry.
+	*/
 	int static getBlockRegistrySize();
 	//Item registerItem(Item block, char name);
 private:

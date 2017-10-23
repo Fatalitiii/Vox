@@ -1,6 +1,26 @@
 #include "world.h"
 
-IBlock world::getBlockAt(int xPos, int yPos, int zPos){
+world::world(const std::string worldSaveLocation)
+{
+    this->worldSaveLocation = worldSaveLocation;
+    this->loadWorld();
+}
+
+void world::loadWorld()
+{
+    /* TODO:
+        Load resource location world.lua
+        world.lua
+            - name = string
+            - desc = string
+            - default spawn = {{aX, aY, aZ}, {bX, bY, bZ}}
+            where a and b are different spawns and random depending
+            on number of players
+    */
+}
+
+IBlock world::getBlockAt(int xPos, int yPos, int zPos)
+{
     int cX, cY, cZ;
     cX = floor(xPos/16)*16;
     cY = floor(yPos/16)*16;
