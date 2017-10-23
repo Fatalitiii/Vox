@@ -3,17 +3,22 @@
 std::vector<IBlock> GameRegistry::blockID;
 std::vector<std::string> GameRegistry::blockName;
 
+GameRegistry::GameRegistry()
+{
+	GameRegistry::blockID.reserve(GameRegistry::MAX_BLOCK_ID);
+	GameRegistry::blockName.reserve(GameRegistry::MAX_BLOCK_ID);
+}
+
 void GameRegistry::registerBlock(IBlock block)
 {
 	if (std::find(GameRegistry::blockName.begin(), GameRegistry::blockName.end(), block.getName()) != GameRegistry::blockName.end()) {
-		//Block with same name already in regisrty
 		std::cout << "Unable to add " << block.getName() << " as already in registry under ID["
 			<< getBlockID(block.getName()) << "], suggest changing name." << std::endl;
 	}
 	else {
 		//Block is the first instancy
-		GameRegistry::blockID.push_back(block);
-		GameRegistry::blockName.push_back(block.getName());
+		GameRegistry::blockID.emplace_back(block);
+		GameRegistry::blockName.emplace_back(block.getName());
 		std::cout << "Registered " << block.getName() << " with ID["
 			<< getBlockID(block.getName()) << "]" << std::endl;
 

@@ -21,9 +21,5 @@ void Blocks::registerBlocks() {
 	GameRegistry::registerBlock(Blocks::WOOD);
 	GameRegistry::registerBlock(Blocks::LEAVES);
 	GameRegistry::registerBlock(Blocks::PLANK);
-
-	for (int i = 0; i < 9;i++) {
-		std::cout << GameRegistry::getBlock(i)->getName() << " : " <<GameRegistry::getBlockID(GameRegistry::getBlock(i)->getName()) << std::endl;
-	}
 }
 

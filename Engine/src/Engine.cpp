@@ -3,6 +3,7 @@
 namespace engine {
 	void init() 
 	{
+		GameRegistry::GameRegistry();
 		Blocks::registerBlocks();
 	}
 }

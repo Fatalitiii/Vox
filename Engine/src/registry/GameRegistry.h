@@ -8,6 +8,8 @@
 
 class GameRegistry {
 public:
+
+	GameRegistry();
 	/**
 		Registers block with the registry
 		@param block
@@ -42,10 +44,9 @@ public:
 	int static getBlockRegistrySize();
 	//Item registerItem(Item block, char name);
 private:
-	const int MIN_BLOCK_ID = 0;
-	const int MAX_BLOCK_ID = 4095;
-	const int MIM_ITEM_ID = 4096;
-	const int MAX_ITEM_ID = 31999;
+	static const int MAX_BLOCK_ID = 4095;
+	static const int MIM_ITEM_ID = 4096;
+	static const int MAX_ITEM_ID = 31999;
 	static std::vector<IBlock> blockID;
 	static std::vector<std::string> blockName;
 	//Item typedef std::map<Item, int> blockID;
