@@ -3,6 +3,13 @@
 IBlock::IBlock(std::string modID, std::string unlocalName)
 {
 	this->unlocalizedName = modID + ":" + unlocalName;
+	this->resourcePath = this->unlocalizedName;
+}
+
+IBlock::IBlock(std::string modID, std::string unlocalName, std::string resourcePath)
+{
+	this->unlocalizedName = modID + ":" + unlocalName;
+	this->resourcePath = resourcePath;
 }
 
 bool IBlock::isVisible()
@@ -28,4 +35,9 @@ int IBlock::getStateFromMeta(int meta)
 void IBlock::setDefaultState(int meta)
 {
 	this->meta = meta;
+}
+
+std::string IBlock::getResourcePath()
+{
+	return this->resourcePath;
 }
