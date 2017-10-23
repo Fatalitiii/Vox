@@ -2,8 +2,9 @@
 #define GAMEREGISTRY_H
 
 #include "../blocks/IBlock.h"
-#include <map>
+#include <vector>
 #include <string>
+#include <algorithm>
 
 class GameRegistry {
 public:
@@ -45,8 +46,8 @@ private:
 	const int MAX_BLOCK_ID = 4095;
 	const int MIM_ITEM_ID = 4096;
 	const int MAX_ITEM_ID = 31999;
-	static std::map<int, IBlock> blockID;
-	static std::map<std::string, IBlock> blockName;
+	static std::vector<IBlock> blockID;
+	static std::vector<std::string> blockName;
 	//Item typedef std::map<Item, int> blockID;
 };
 

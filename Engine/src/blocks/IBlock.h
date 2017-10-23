@@ -51,17 +51,17 @@ public:
 		Gets the name of the block.
 		@return The the unlocalized name.
 	*/
-	virtual std::string getName();
+	std::string getName() const;
 
 	/**
 		Gets the resource path.
 		@return The resource path of the block.
 	*/
-	virtual std::string getResourcePath();
-protected:
+	std::string getResourcePath();
+private:
 	std::string unlocalizedName;
 	int meta;
-	std::string resourcePath();
+	std::string resourcePath;
 };
 
 #endif // IBLOCK_H

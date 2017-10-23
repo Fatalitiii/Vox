@@ -1,12 +1,12 @@
-#include "world.h"
+#include "World.h"
 
-world::world(const std::string worldSaveLocation)
+World::World(const std::string worldSaveLocation)
 {
     this->worldSaveLocation = worldSaveLocation;
     this->loadWorld();
 }
 
-void world::loadWorld()
+void World::loadWorld()
 {
     /* TODO:
         Load resource location world.lua
@@ -19,12 +19,12 @@ void world::loadWorld()
     */
 }
 
-IBlock world::getBlockAt(int xPos, int yPos, int zPos)
+IBlock World::getBlockAt(int xPos, int yPos, int zPos)
 {
-    int cX, cY, cZ;
+	//Floor gets the exact region it is in {0,0} or {1,0}
+    int cX, cZ;
     cX = floor(xPos/16)*16;
-    cY = floor(yPos/16)*16;
     cZ = floor(zPos/16)*16;
 
-    chunk[xPos/16][yPos/16][zPos/16].getBlockAt(cX, cY, cZ)
+	Region[xPos / 16][zPos / 16].getBlockAt(cX, yPos, cZ);
 }

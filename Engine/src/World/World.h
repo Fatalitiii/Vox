@@ -2,19 +2,20 @@
 #define WORLD_H
 
 #include "../blocks/IBlock.h"
-#include "Chunk/Chunk.h"
+#include "/Chunk/Chunk.h"
+#include "/Chunk/Region.h"
 
 
 #include <math.h>
 
-class world(){
+class World{
 public:
     /**
         Sets up the world.
         @param worldSaveLocation the location of the world file.
     */
-    world(const std::string worldSaveLocation);
-    Chunk[][] region;
+	World(const std::string worldSaveLocation);
+    Region[][] region;
     /**
         Retrieve IBlock at a given position in the world.
         @param xPos the X position of the block.
