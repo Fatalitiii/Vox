@@ -5,7 +5,17 @@
 
 class Region {
 public:
-	Chunk[] chunks;
+	Chunk* chunks[];
+	static int xPos, zPos;
+
+	Region(int xPos, int zPos)
+	{
+		this->chunks[3];
+		for (int y = 0;y < 3;y++) {
+			this->chunks[y] = new Chunk(xPos, y, zPos);
+		}
+	};
+
 	/**
 		Retrieve IBlock at a given position in the chunk.
 		Should be called from World.h
@@ -14,11 +24,8 @@ public:
 		@param zPos the Z position of the block.
 		@return The IBlock at the position.
 	*/
-	IBlock getBlockAt(int xPos, int yPos, int zPos)
-	{
-		return this->chunks[i].ge
-	}
+	IBlock getBlockAt(int xPos, int yPos, int zPos);
 private:
-}
+};
 
 #endif // REGION_H
