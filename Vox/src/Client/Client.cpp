@@ -1,7 +1,5 @@
 #include "Client.h"
 
-#include <iostream>
-
 Client::Client() {
 	std::cout << "\n---------- Stating Client ----------" << std::endl;
 	if (!glfwInit()) {
@@ -23,6 +21,24 @@ void Client::init()
 	if (glewInit() != GLEW_OK)
 		std::cout << "Glew Init failed!" << std::endl;
 
+	World* world = new World("test");
+	world->create();
+	std::string n;
+	int x, y, z;
+	for (y = 0; y < 16; y++) {
+		for (x = 0; x < 16; x++) {
+			for (z = 0; z < 16; z++) {
+				n += world->getBlockAt(x, y, z).getName() + " [" + std::to_string(x) + "," + std::to_string(y) + "," + std::to_string(z) + "], ";
+				if (z == 15) {
+					n += "\n";
+				}
+			}
+			if (x == 15) {
+				n += "\n\n";
+			}
+		}
+	}
+	std::cout << n << std::endl;
 	update();
 }
 

@@ -3,6 +3,7 @@
 
 #include "../blocks/BlockAir.h"
 #include "../blocks/BlockStone.h"
+#include "../blocks/BlockPlank.h"
 #include "GameRegistry.h"
 
 class Blocks {
@@ -15,7 +16,11 @@ public:
 	static IBlock WATER;
 	static IBlock WOOD;
 	static IBlock LEAVES;
+	static IBlock PLANK;
 
+	/**
+        Register all the blocks with the registry.
+    */
 	static void registerBlocks();
 };
 
